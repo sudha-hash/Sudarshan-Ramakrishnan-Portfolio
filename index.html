@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudarshan Ramakrishnan | Senior Data Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0b1120;
+    color:#e2e8f0;
+    line-height:1.7;
+    scroll-behavior:smooth;
+}
+
+/* NAVIGATION */
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(15,23,42,0.8);
+    backdrop-filter:blur(10px);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+nav a{
+    margin-left:25px;
+    color:#cbd5e1;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#3b82f6;
+}
+
+/* HERO */
+header{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:radial-gradient(circle at top,#1e293b,#0b1120);
+    padding:20px;
+}
+
+header h1{
+    font-size:3.5rem;
+    font-weight:900;
+    background:linear-gradient(90deg,#3b82f6,#22d3ee);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+header p{
+    margin-top:20px;
+    font-size:1.3rem;
+    color:#94a3b8;
+    max-width:700px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.btn{
+    padding:12px 28px;
+    border-radius:30px;
+    border:none;
+    margin:10px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#3b82f6;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#2563eb;
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid #3b82f6;
+    color:#3b82f6;
+}
+
+.btn-outline:hover{
+    background:#3b82f6;
+    color:white;
+}
+
+/* SECTION */
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 20px;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:50px;
+    text-align:center;
+    color:#3b82f6;
+}
+
+/* METRICS */
+.metrics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.metric{
+    background:rgba(30,41,59,0.7);
+    padding:40px;
+    border-radius:15px;
+    backdrop-filter:blur(8px);
+    transition:0.3s;
+}
+
+.metric:hover{
+    transform:translateY(-8px);
+}
+
+.metric h3{
+    font-size:2rem;
+    color:#22d3ee;
+}
+
+/* GRID CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111827;
+    padding:35px;
+    border-radius:15px;
+    transition:0.3s;
+    border:1px solid #1f2937;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#3b82f6;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#22d3ee;
+}
+
+/* TECH STACK */
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.tag{
+    background:#1e293b;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:0.9rem;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    background:#020617;
+    color:#64748b;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div><strong>Sudarshan</strong></div>
+<div>
+<a href="#impact">Impact</a>
+<a href="#architecture">Architecture</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<header>
+<h1>Senior Data Engineer</h1>
+<p>
+Designing scalable multi-cloud data platforms across AWS, Azure & GCP. 
+Specialized in distributed systems, real-time streaming, and enterprise analytics architecture.
+</p>
+
+<div class="hero-buttons">
+<button class="btn btn-primary">View Projects</button>
+<button class="btn btn-outline">Download Resume</button>
+</div>
+</header>
+
+<section id="impact">
+<h2>Enterprise Impact</h2>
+<div class="metrics">
+<div class="metric"><h3>6+ Years</h3><p>Enterprise Data Engineering</p></div>
+<div class="metric"><h3>2TB+</h3><p>Daily Data Processing</p></div>
+<div class="metric"><h3>40% Faster</h3><p>Pipeline Optimization</p></div>
+<div class="metric"><h3>25% Savings</h3><p>Cloud Cost Reduction</p></div>
+</div>
+</section>
+
+<section id="architecture">
+<h2>Architecture Case Studies</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Real-Time Claims Intelligence</h3>
+<p>
+Kafka → Azure Databricks → Synapse → BI. Reduced latency from 4 hours to 15 minutes. Integrated ML-driven churn modeling.
+</p>
+</div>
+
+<div class="card">
+<h3>Global HR Analytics</h3>
+<p>
+AWS S3 → Glue ETL → Redshift. CI/CD with Terraform. Achieved 60% faster warehouse queries.
+</p>
+</div>
+
+<div class="card">
+<h3>Healthcare Streaming Platform</h3>
+<p>
+GCP Pub/Sub → Dataflow → BigQuery architecture supporting large-scale claims processing with compliance controls.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<h2>Technical Expertise</h2>
+<div class="tech">
+<div class="tag">Spark / PySpark</div>
+<div class="tag">Kafka</div>
+<div class="tag">Databricks</div>
+<div class="tag">Snowflake</div>
+<div class="tag">BigQuery</div>
+<div class="tag">AWS</div>
+<div class="tag">Azure</div>
+<div class="tag">GCP</div>
+<div class="tag">Docker</div>
+<div class="tag">Kubernetes</div>
+<div class="tag">Terraform</div>
+<div class="tag">LLMs / NLP</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Connect</h2>
+<p style="text-align:center;">
+Email: <a href="mailto:srsaranganrishn@gmail.com">srsaranganrishn@gmail.com</a><br><br>
+LinkedIn: <a href="https://www.linkedin.com/in/aisu-rs-gaidm" target="_blank">linkedin.com/in/aisu-rs-gaidm</a><br><br>
+GitHub: <a href="https://github.com/sudha-hash" target="_blank">github.com/sudha-hash</a>
+</p>
+</section>
+
+<footer>
+© 2026 Sudarshan Ramakrishnan — Engineered for Scale
+</footer>
+
+</body>
+</html>

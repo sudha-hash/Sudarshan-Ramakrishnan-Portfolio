@@ -8,45 +8,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
     font-family:'Inter',sans-serif;
-    background:linear-gradient(135deg,#0f172a,#020617);
-    color:#e2e8f0;
+    background:linear-gradient(135deg,#0b1120,#020617);
+    color:#e5e7eb;
     line-height:1.8;
-    scroll-behavior:smooth;
 }
 
-/* Smooth Fade Animation */
-.fade-in{
+/* Smooth fade */
+.fade{
     opacity:0;
-    transform:translateY(30px);
+    transform:translateY(25px);
     animation:fadeUp 1s ease forwards;
 }
-.fade-in:nth-child(2){animation-delay:0.2s;}
-.fade-in:nth-child(3){animation-delay:0.4s;}
-.fade-in:nth-child(4){animation-delay:0.6s;}
-
 @keyframes fadeUp{
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    to{opacity:1; transform:translateY(0);}
 }
 
-/* Navigation */
+/* NAV */
 nav{
     position:fixed;
     width:100%;
-    background:rgba(2,6,23,0.9);
-    backdrop-filter:blur(12px);
-    padding:18px 50px;
+    background:rgba(2,6,23,0.95);
+    padding:18px 60px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    z-index:1000;
     border-bottom:1px solid rgba(59,130,246,0.15);
+    z-index:1000;
 }
 
 nav strong{
@@ -61,12 +52,9 @@ nav a{
     font-weight:500;
     transition:0.3s;
 }
+nav a:hover{color:#3b82f6;}
 
-nav a:hover{
-    color:#3b82f6;
-}
-
-/* Hero Section */
+/* HERO */
 header{
     min-height:100vh;
     display:flex;
@@ -85,14 +73,20 @@ header h1{
     -webkit-text-fill-color:transparent;
 }
 
-header p{
-    margin-top:30px;
-    font-size:1.25rem;
-    color:#94a3b8;
-    max-width:900px;
+header h3{
+    margin-top:15px;
+    font-weight:500;
+    color:#9ca3af;
 }
 
-/* Sections */
+header p{
+    margin-top:30px;
+    max-width:900px;
+    font-size:1.2rem;
+    color:#cbd5e1;
+}
+
+/* SECTION */
 section{
     max-width:1200px;
     margin:auto;
@@ -108,34 +102,31 @@ h2{
     -webkit-text-fill-color:transparent;
 }
 
-/* Metrics */
+/* METRICS */
 .metrics{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:35px;
-    text-align:center;
 }
 
 .metric{
-    background:rgba(15,23,42,0.8);
-    padding:45px;
-    border-radius:16px;
-    border:1px solid rgba(59,130,246,0.15);
-    transition:0.4s;
+    background:rgba(15,23,42,0.95);
+    padding:40px;
+    border-radius:18px;
+    border:1px solid rgba(59,130,246,0.12);
+    transition:0.3s;
 }
-
 .metric:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
     border-color:#3b82f6;
 }
-
 .metric h3{
     font-size:2.2rem;
     color:#22d3ee;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
-/* Cards */
+/* CARDS */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -143,41 +134,38 @@ h2{
 }
 
 .card{
-    background:rgba(15,23,42,0.9);
+    background:rgba(15,23,42,0.95);
     padding:40px;
     border-radius:18px;
     border:1px solid rgba(139,92,246,0.15);
-    transition:0.4s;
+    transition:0.3s;
 }
-
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
     border-color:#8b5cf6;
 }
-
 .card h3{
-    margin-bottom:20px;
-    font-size:1.4rem;
+    margin-bottom:18px;
     color:#60a5fa;
+    font-size:1.3rem;
 }
 
-/* Skills */
+/* SKILLS */
 .tech{
     display:flex;
     flex-wrap:wrap;
     gap:18px;
     justify-content:center;
 }
-
 .tag{
-    background:rgba(30,41,59,0.8);
-    padding:10px 20px;
-    border-radius:25px;
-    font-size:0.95rem;
+    background:rgba(30,41,59,0.85);
+    padding:10px 22px;
+    border-radius:30px;
     border:1px solid rgba(59,130,246,0.2);
+    font-size:0.95rem;
 }
 
-/* Contact */
+/* CONTACT */
 #contact p{
     text-align:center;
     font-size:1.1rem;
@@ -187,18 +175,14 @@ a{
     color:#22d3ee;
     text-decoration:none;
 }
+a:hover{text-decoration:underline;}
 
-a:hover{
-    text-decoration:underline;
-}
-
-/* Footer */
 footer{
     text-align:center;
     padding:50px;
     background:#020617;
+    border-top:1px solid rgba(59,130,246,0.15);
     color:#64748b;
-    border-top:1px solid rgba(59,130,246,0.1);
 }
 </style>
 </head>
@@ -209,66 +193,70 @@ footer{
 <div><strong>Sudarshan Ramakrishnan</strong></div>
 <div>
 <a href="#impact">Impact</a>
-<a href="#experience">Architecture</a>
+<a href="#architecture">Architecture</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <header>
-<h1 class="fade-in">Senior Data Engineer</h1>
-<p class="fade-in">
-Strategic and results-oriented Data Engineering professional with over six years of experience architecting and delivering enterprise-grade, highly scalable, and cost-optimized data platforms across AWS, Azure, and GCP ecosystems. Proven track record of leading distributed data transformations exceeding multiple terabytes per day, modernizing legacy data infrastructures into real-time streaming architectures, and enabling advanced analytics and machine learning capabilities that directly influence executive decision-making and business growth.
+<h1 class="fade">Senior Data Engineer</h1>
+<h3 class="fade">Distributed Systems • Real-Time Data Platforms • Multi-Cloud Architecture</h3>
+<p class="fade">
+Architecting resilient, scalable, and production-grade data platforms across AWS, Azure, and GCP. 
+With over six years of experience modernizing enterprise data ecosystems, I design distributed systems processing multi-terabyte workloads daily, establish governance and reliability standards, and lead cross-functional initiatives that enable executive analytics, regulatory reporting, and machine learning innovation at scale.
 </p>
 </header>
 
 <section id="impact">
-<h2>Quantifiable Business Impact</h2>
-<div class="metrics fade-in">
+<h2>Strategic Business Impact</h2>
+<div class="metrics fade">
+
 <div class="metric">
 <h3>6+ Years</h3>
-<p>Driving enterprise-scale data engineering initiatives across finance, healthcare, and analytics domains.</p>
+<p>Driving enterprise data architecture initiatives across finance, healthcare, and analytics domains.</p>
 </div>
 
 <div class="metric">
 <h3>2TB+</h3>
-<p>Daily distributed data ingestion, transformation, and optimization across multi-cloud environments.</p>
+<p>Designed distributed ingestion and transformation frameworks handling multi-terabyte daily workloads.</p>
 </div>
 
 <div class="metric">
 <h3>40%+</h3>
-<p>Reduction in end-to-end pipeline latency through Spark tuning and architectural redesign.</p>
+<p>Reduced pipeline latency through Spark optimization, partition redesign, and workload parallelization.</p>
 </div>
 
 <div class="metric">
 <h3>25%+</h3>
-<p>Cloud infrastructure cost optimization via partitioning, lifecycle policies, and resource right-sizing.</p>
+<p>Achieved measurable cloud cost reduction via infrastructure automation and storage optimization strategies.</p>
 </div>
+
 </div>
 </section>
 
-<section id="experience">
+<section id="architecture">
 <h2>Enterprise Architecture Leadership</h2>
-<div class="grid fade-in">
+<div class="grid fade">
 
 <div class="card">
 <h3>Real-Time Claims Intelligence Platform</h3>
 <p>
-Architected an event-driven, fault-tolerant streaming ecosystem leveraging Apache Kafka, Azure Databricks, and Synapse Analytics to transition from batch-based processing to near real-time intelligence. Reduced reporting latency from four hours to under fifteen minutes while integrating predictive machine learning models that enhanced churn detection accuracy and operational efficiency.
+Led the design and implementation of a fault-tolerant, SLA-driven streaming architecture using Apache Kafka, Azure Databricks, and Synapse Analytics. Transitioned legacy batch workflows to near real-time intelligence, reducing reporting latency from four hours to under fifteen minutes while enabling predictive analytics capabilities for business stakeholders.
 </p>
 </div>
 
 <div class="card">
-<h3>Global HR & Workforce Analytics Modernization</h3>
+<h3>Global Workforce Analytics Modernization</h3>
 <p>
-Designed and deployed a scalable AWS-based data lake architecture utilizing S3, Glue, and Redshift to consolidate fragmented workforce datasets into a unified analytics platform. Implemented CI/CD pipelines and Infrastructure-as-Code with Terraform, improving release velocity and decreasing warehouse query execution times by over sixty percent.
+Designed and owned a scalable AWS data lake architecture leveraging S3, Glue, and Redshift to unify fragmented datasets into a governed analytics platform. Implemented CI/CD pipelines and Infrastructure-as-Code with Terraform, improving deployment reliability and decreasing warehouse query execution time by over sixty percent.
 </p>
 </div>
 
 <div class="card">
-<h3>Healthcare Streaming & Compliance Platform</h3>
+<h3>Healthcare Streaming & Governance Platform</h3>
 <p>
-Engineered a highly reliable GCP streaming data platform using Pub/Sub, Dataflow, and BigQuery to process high-volume healthcare claims with strict governance and compliance standards. Enabled secure, auditable, and scalable processing pipelines supporting enterprise-wide analytics and regulatory reporting.
+Engineered a secure and compliant GCP streaming ecosystem using Pub/Sub, Dataflow, and BigQuery to process high-volume healthcare claims under strict regulatory controls. Established governance standards, observability frameworks, and scalable deployment patterns aligned with enterprise SLAs.
 </p>
 </div>
 
@@ -277,7 +265,7 @@ Engineered a highly reliable GCP streaming data platform using Pub/Sub, Dataflow
 
 <section id="skills">
 <h2>Core Technical Expertise</h2>
-<div class="tech fade-in">
+<div class="tech fade">
 <div class="tag">Python / PySpark</div>
 <div class="tag">Apache Spark</div>
 <div class="tag">Kafka</div>
@@ -291,7 +279,8 @@ Engineered a highly reliable GCP streaming data platform using Pub/Sub, Dataflow
 <div class="tag">Kubernetes</div>
 <div class="tag">Terraform</div>
 <div class="tag">Advanced SQL</div>
-<div class="tag">Data Warehousing</div>
+<div class="tag">Data Governance</div>
+<div class="tag">Observability & SLAs</div>
 </div>
 </section>
 
@@ -305,7 +294,7 @@ GitHub: <a href="https://github.com/sudha-hash" target="_blank">github.com/sudha
 </section>
 
 <footer>
-© 2026 Sudarshan Ramakrishnan — Architecting Data at Scale
+© 2026 Sudarshan Ramakrishnan — Architecting Production-Grade Data Systems
 </footer>
 
 </body>
